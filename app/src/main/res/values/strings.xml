@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SmsAnnunciator</string>
+    <string name="notification_title">Ready to Receive SMS</string>
+    <string name="notification_text">Alarms when OpenSeizureDetector SMS Alert Received</string>
+    <string name="annunciator_ervice_status_text">"Annunciator Service Status: "</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="accept_alarm">Accept Alarm</string>
+</resources>
