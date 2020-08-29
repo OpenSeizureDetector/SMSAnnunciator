@@ -138,6 +138,14 @@ public class SmsAnnunciatorService extends Service {
     public void onDestroy() {
         Log.i(TAG, "onDestroy(): SmsAnnunciator Service stopping");
         unregisterReceiver(mSmsReceiver);
+
+        try {
+            // Cancel the notification.
+            Log.v(TAG, "onDestroy(): cancelling notification");
+            mNM.cancel(NOTIFICATION_ID);
+        } catch (Exception e) {
+            Log.v(TAG, "Exception cancelling Notification: " + e.toString());
+        }
     }
 
     /**

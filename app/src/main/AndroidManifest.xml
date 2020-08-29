@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="uk.org.openseizuredetector.sms_annunciator"
-    android:versionCode="1"
-    android:versionName="0.1">
+    package="uk.org.openseizuredetector.sms_annunciator">
 
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
@@ -14,20 +12,22 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".StartUpActivity">
+        <activity android:name=".ControlActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".ControlActivity"></activity>
 
         <service
             android:name=".SmsAnnunciatorService"
             android:enabled="true"
             android:exported="true" />
+
+        <uses-library
+            android:name="android.test.runner"
+            android:required="false" />
+
     </application>
 
 </manifest>

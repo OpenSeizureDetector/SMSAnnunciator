@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:text="service_status_tv" />
 
-    <LinearLayout
+    <!--<LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -37,6 +37,7 @@
             android:layout_height="wrap_content"
             android:text="@string/stop" />
     </LinearLayout>
+    -->
 
     <TextView
         android:id="@+id/alarmStandingTv"
