@@ -188,6 +188,8 @@ public class ControlActivity extends AppCompatActivity {
             if (!mServiceConn.mBound) {
                 tv.setText("Service Not Running - Start Using Switch Above ^");
                 tv.setBackgroundColor(Color.YELLOW);
+                if (mEnableSwitch != null)
+                    mEnableSwitch.setChecked(false);
                 //mStartBtn.setEnabled(true);
                 //mStopBtn.setEnabled(false);
                 mAcceptBtn.setBackgroundColor(Color.LTGRAY);
@@ -198,7 +200,8 @@ public class ControlActivity extends AppCompatActivity {
                 if (mServiceConn.mService == null) {
                     tv.setText("Service Stopped");
                     tv.setBackgroundColor(Color.YELLOW);
-                    mEnableSwitch.setChecked(false);
+                    if (mEnableSwitch != null)
+                        mEnableSwitch.setChecked(false);
                     //mStartBtn.setEnabled(true);
                     //mStopBtn.setEnabled(false);
                     mAcceptBtn.setBackgroundColor(Color.LTGRAY);
@@ -209,7 +212,8 @@ public class ControlActivity extends AppCompatActivity {
                 } else {
                     tv.setText("Service Running");
                     tv.setBackgroundColor(Color.WHITE);
-                    mEnableSwitch.setChecked(true);
+                    if (mEnableSwitch != null)
+                        mEnableSwitch.setChecked(true);
                     //mStartBtn.setEnabled(false);
                     //mStopBtn.setEnabled(true);
                     if (mServiceConn.mService.mAlarmStanding) {
