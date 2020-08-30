@@ -192,8 +192,11 @@ public class ControlActivity extends AppCompatActivity {
                     mEnableSwitch.setChecked(false);
                 //mStartBtn.setEnabled(true);
                 //mStopBtn.setEnabled(false);
-                mAcceptBtn.setBackgroundColor(Color.LTGRAY);
-                mAcceptBtn.setTextColor(Color.BLACK);
+                if (mAcceptBtn != null) {
+                    mAcceptBtn.setBackgroundColor(Color.LTGRAY);
+                    mAcceptBtn.setTextColor(Color.BLACK);
+                    mAcceptBtn.setEnabled(false);
+                }
                 tv = (TextView) findViewById(R.id.alarmStandingTv);
                 tv.setText("---");
             } else {
@@ -207,6 +210,7 @@ public class ControlActivity extends AppCompatActivity {
                     if (mAcceptBtn != null) {
                         mAcceptBtn.setBackgroundColor(Color.LTGRAY);
                         mAcceptBtn.setTextColor(Color.BLACK);
+                        mAcceptBtn.setEnabled(false);
                     }
                     tv = (TextView) findViewById(R.id.alarmStandingTv);
                     tv.setText("---");
@@ -222,11 +226,13 @@ public class ControlActivity extends AppCompatActivity {
                         if (mAcceptBtn != null) {
                             mAcceptBtn.setBackgroundColor(Color.RED);
                             mAcceptBtn.setTextColor(Color.WHITE);
+                            mAcceptBtn.setEnabled(true);
                         }
                     } else {
                         if (mAcceptBtn != null) {
                             mAcceptBtn.setBackgroundColor(Color.LTGRAY);
                             mAcceptBtn.setTextColor(Color.BLACK);
+                            mAcceptBtn.setEnabled(true);
                         }
                     }
                     tv = (TextView) findViewById(R.id.alarmStandingTv);
