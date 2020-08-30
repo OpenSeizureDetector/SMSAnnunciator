@@ -204,8 +204,10 @@ public class ControlActivity extends AppCompatActivity {
                         mEnableSwitch.setChecked(false);
                     //mStartBtn.setEnabled(true);
                     //mStopBtn.setEnabled(false);
-                    mAcceptBtn.setBackgroundColor(Color.LTGRAY);
-                    mAcceptBtn.setTextColor(Color.BLACK);
+                    if (mAcceptBtn != null) {
+                        mAcceptBtn.setBackgroundColor(Color.LTGRAY);
+                        mAcceptBtn.setTextColor(Color.BLACK);
+                    }
                     tv = (TextView) findViewById(R.id.alarmStandingTv);
                     tv.setText("---");
 
@@ -217,11 +219,15 @@ public class ControlActivity extends AppCompatActivity {
                     //mStartBtn.setEnabled(false);
                     //mStopBtn.setEnabled(true);
                     if (mServiceConn.mService.mAlarmStanding) {
-                        mAcceptBtn.setBackgroundColor(Color.RED);
-                        mAcceptBtn.setTextColor(Color.WHITE);
+                        if (mAcceptBtn != null) {
+                            mAcceptBtn.setBackgroundColor(Color.RED);
+                            mAcceptBtn.setTextColor(Color.WHITE);
+                        }
                     } else {
-                        mAcceptBtn.setBackgroundColor(Color.LTGRAY);
-                        mAcceptBtn.setTextColor(Color.BLACK);
+                        if (mAcceptBtn != null) {
+                            mAcceptBtn.setBackgroundColor(Color.LTGRAY);
+                            mAcceptBtn.setTextColor(Color.BLACK);
+                        }
                     }
                     tv = (TextView) findViewById(R.id.alarmStandingTv);
                     if (mServiceConn.mService.mAlarmStanding) {
