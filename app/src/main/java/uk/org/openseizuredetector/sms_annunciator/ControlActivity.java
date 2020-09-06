@@ -96,8 +96,16 @@ public class ControlActivity extends AppCompatActivity {
                     }
                 } else {
                     Log.v(TAG,"Server Disabled from Switch");
-                    mServiceConn.mService.acceptAlarm();
-                    mUtil.unbindFromServer(mActivity, mServiceConn);
+                    if (mServiceConn != null) {
+                        if (mServiceConn.mService != null) {
+                            mServiceConn.mService.acceptAlarm();
+                        } else {
+                            Log.w(TAG,"mServiceConn.mService is null, so not accepting alarm");
+                        }
+                        mUtil.unbindFromServer(mActivity, mServiceConn);
+                    } else {
+                        Log.w(TAG,"mServiceConn.is null, so not unbinding from server");
+                    }
                     mUtil.stopServer();
                 }
             }
