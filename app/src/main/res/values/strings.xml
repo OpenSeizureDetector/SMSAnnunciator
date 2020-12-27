@@ -15,4 +15,18 @@
     <string name="credits_text">CREDITS:  \n
         Android App:  Copyright Graham Jones, 2020.\n
         The Logo is based on Star of life2 by Verdy P, Licensed under Public Domain via\n Wikimedia Commons (http://commons.wikimedia.org/wiki/File:Star_of_life2.svg#mediaviewer/File:Star_of_life2.svg).</string>
+    <string name="notShutdownProperlyWarning">WARNING - System did not restart correctly - please re-boot phone or force stop SmsAnnunciator</string>
+    <string name="EmptySMSMsg">Empty SMS Message Received - Ignoring</string>
+    <string name="SMSFromText">SMS from</string>
+    <string name="FoundOsdSmsMsg">Found OpenSeizureDetector SMS Message - Generating Alarm</string>
+    <string name="NotOsdSmsMsg">\"Message is not an OpenSeizureDetector SMS Alert so Ignoring - it does not contain \"</string>
+    <string name="StartingSmsAnnunciatorMsg">Starting OpenSeizureDetector SMS Annunciator.....</string>
+    <string name="AboutMenuTitle">About</string>
+    <string name="EnableMenuTitle">Enable</string>
+    <string name="ServiceNotRunningMsg">Service Not Running - Start Using Switch Above ^</string>
+    <string name="ServiceStoppedMsg">Service Stopped</string>
+    <string name="ServiceRunningMsg">Service Running</string>
+    <string name="AlarmStandingMsg">ALARM STANDING</string>
+    <string name="AlarmOKMsg">Alarm Status OK</string>
+    <string name="SMSAnnunciatorTitle">SMS Annunciator</string>
 </resources>

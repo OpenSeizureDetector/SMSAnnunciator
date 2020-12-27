@@ -194,7 +194,7 @@ public class ControlActivity extends AppCompatActivity {
             TextView tv;
             tv = (TextView) findViewById(R.id.service_status_tv);
             if (!mServiceConn.mBound) {
-                tv.setText("Service Not Running - Start Using Switch Above ^");
+                tv.setText(R.string.ServiceNotRunningMsg);
                 tv.setBackgroundColor(Color.YELLOW);
                 if (mEnableSwitch != null)
                     mEnableSwitch.setChecked(false);
@@ -209,7 +209,7 @@ public class ControlActivity extends AppCompatActivity {
                 tv.setText("---");
             } else {
                 if (mServiceConn.mService == null) {
-                    tv.setText("Service Stopped");
+                    tv.setText(R.string.ServiceStoppedMsg);
                     tv.setBackgroundColor(Color.YELLOW);
                     if (mEnableSwitch != null)
                         mEnableSwitch.setChecked(false);
@@ -224,7 +224,7 @@ public class ControlActivity extends AppCompatActivity {
                     tv.setText("---");
 
                 } else {
-                    tv.setText("Service Running");
+                    tv.setText(R.string.ServiceRunningMsg);
                     tv.setBackgroundColor(Color.WHITE);
                     if (mEnableSwitch != null)
                         mEnableSwitch.setChecked(true);
@@ -245,9 +245,9 @@ public class ControlActivity extends AppCompatActivity {
                     }
                     tv = (TextView) findViewById(R.id.alarmStandingTv);
                     if (mServiceConn.mService.mAlarmStanding) {
-                        tv.setText("ALARM STANDING");
+                        tv.setText(R.string.AlarmStandingMsg);
                     } else {
-                        tv.setText("Alarm Status OK");
+                        tv.setText(R.string.AlarmOKMsg);
                     }
                     tv = (TextView) findViewById(R.id.phoneNoTv);
                     tv.setText(mServiceConn.mService.mAlarmPhoneNo);
@@ -284,7 +284,7 @@ public class ControlActivity extends AppCompatActivity {
         Log.i(TAG, "showAbout() - version name = " + versionName);
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setIcon(R.drawable.icon_24x24_green);
-        builder.setTitle("SMS Annunciator V" + versionName);
+        builder.setTitle(getString(R.string.SMSAnnunciatorTitle)+" V" + versionName);
         builder.setView(aboutView);
         builder.create();
         builder.show();

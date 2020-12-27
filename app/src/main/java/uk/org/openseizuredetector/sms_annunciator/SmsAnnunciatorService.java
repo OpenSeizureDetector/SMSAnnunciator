@@ -189,7 +189,7 @@ public class SmsAnnunciatorService extends Service {
             mToneGenerator.startTone(ToneGenerator.TONE_CDMA_ALERT_CALL_GUARD, duration);
             Log.v(TAG, "beep()");
         } else {
-            showToast("Warning mToneGenerator is null - not beeping!!!");
+            showToast(getString(R.string.notShutdownProperlyWarning));
             Log.v(TAG, "beep() - Warming mToneGenerator is null - not beeping!!!");
         }
     }
@@ -240,7 +240,7 @@ public class SmsAnnunciatorService extends Service {
             SmsMessage[] msgs = null;
             if (bundle == null) {
                 Toast.makeText(context,
-                        "Empty SMS Message Received - Ignoring",
+                        R.string.EmptySMSMsg,
                         Toast.LENGTH_SHORT).show();
             } else {
                 //---retrieve the SMS message received---
@@ -249,7 +249,7 @@ public class SmsAnnunciatorService extends Service {
                 for (int i = 0; i < msgs.length; i++) {
                     String str = "";
                     msgs[i] = SmsMessage.createFromPdu((byte[]) pdus[i]);
-                    str += "SMS from " + msgs[i].getOriginatingAddress();
+                    str += getString(R.string.SMSFromText) +" " + msgs[i].getOriginatingAddress();
                     str += " :";
                     str += msgs[i].getMessageBody();
                     str += "\n";
@@ -275,11 +275,11 @@ public class SmsAnnunciatorService extends Service {
                     mAlarmStanding = true;
                     startBeepTimer();
                     Toast.makeText(context,
-                            "Found OpenSeizureDetector UUID - Generating Alarm",
+                            R.string.FoundOsdSmsMsg,
                             Toast.LENGTH_LONG).show();
                 } else {
                     Toast.makeText(context,
-                            "Message does not contain "+shortUuidStr+" - ignoring",
+                            getString(R.string.NotOsdSmsMsg)+shortUuidStr+".",
                             Toast.LENGTH_SHORT).show();
                 }
             }
