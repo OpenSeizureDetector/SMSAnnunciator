@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">SmsAnnunciator</string>
+    <string name="notification_title">Gotowy do odbioru SMS</string>
+    <string name="notification_text">Zaalarmuję gdy odbiorę SMS alarmowy od OpenSeizureDetector</string>
+    <string name="annunciator_ervice_status_text">"Status usługi Annunciatora: "</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="accept_alarm">Zaakceptuj alarm</string>
+    <string name="about_text">OpenSeizureDetector SMS Annunciator\n
+        Odwiedź https://openseizuredetector.org.uk aby uzyskać więcej informacji\n\n\n
+        Copyright &#169; 2020, Graham Jones
+        \nNa oprogramowanie to nie udziela się ABSOLUTNIE ŻADNYCH GWARANCJI.
+        \nJest to wolne oprogramowanie i możesz je rozpowszechniać pod pewnymi warunkami - zobacz https://github.com/OpenSeizureDetector/SMSAnnunciator/blob/master/LICENSE
+        \nKod źródłowy tej apki możesz znaleźć na https://github.com/OpenSeizureDetector/SmsAnnunciator</string>
+    <string name="credits_text">AUTORSTWO:  \n
+        Apka na Android:  Copyright Graham Jones, 2020.\n
+        Logo bazuje na Star of life2 autorstwa Verdy P, na licencji Public Domain poprzez\n Wikimedia Commons (http://commons.wikimedia.org/wiki/File:Star_of_life2.svg#mediaviewer/File:Star_of_life2.svg).</string>
+    <string name="notShutdownProperlyWarning">UWAGA - system nie uruchomił się poprawnie - proszę zrestartować telefon lub wymusić zamknięcie SmsAnnunciator</string>
+    <string name="EmptySMSMsg">Odebrano pusty SMS - ignoruję</string>
+    <string name="SMSFromText">SMS od</string>
+    <string name="FoundOsdSmsMsg">Wykryto SMS OpenSeizureDetector - uruchamiam alarm</string>
+    <string name="NotOsdSmsMsg">\"SMS nie jest alarmem OpenSeizureDetector więc go ignoruję - nie zawiera on \"</string>
+    <string name="StartingSmsAnnunciatorMsg">Uruchamiam OpenSeizureDetector SMS Annunciator...</string>
+    <string name="AboutMenuTitle">O programie</string>
+    <string name="EnableMenuTitle">Włącz</string>
+    <string name="ServiceNotRunningMsg">Usługa nie jest uruchomiona - włącz powyższym przyciskiem ^</string>
+    <string name="ServiceStoppedMsg">Usługa zatrzymana</string>
+    <string name="ServiceRunningMsg">Usługa działa</string>
+    <string name="AlarmStandingMsg">ALARM TRWA</string>
+    <string name="AlarmOKMsg">Status alarmu OK</string>
+    <string name="SMSAnnunciatorTitle">SMS Annunciator</string>
+</resources>
