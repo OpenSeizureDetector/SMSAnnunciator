@@ -19,7 +19,7 @@
     <string name="EmptySMSMsg">Empty SMS Message Received - Ignoring</string>
     <string name="SMSFromText">SMS from</string>
     <string name="FoundOsdSmsMsg">Found OpenSeizureDetector SMS Message - Generating Alarm</string>
-    <string name="NotOsdSmsMsg">\"Message is not an OpenSeizureDetector SMS Alert so Ignoring - it does not contain \"</string>
+    <string name="NotOsdSmsMsg">Message is not an OpenSeizureDetector SMS Alert so Ignoring - it does not contain</string>
     <string name="StartingSmsAnnunciatorMsg">Starting OpenSeizureDetector SMS Annunciator.....</string>
     <string name="AboutMenuTitle">About</string>
     <string name="EnableMenuTitle">Enable</string>

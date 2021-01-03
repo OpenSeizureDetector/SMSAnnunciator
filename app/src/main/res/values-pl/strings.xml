@@ -19,7 +19,7 @@
     <string name="EmptySMSMsg">Odebrano pusty SMS - ignoruję</string>
     <string name="SMSFromText">SMS od</string>
     <string name="FoundOsdSmsMsg">Wykryto SMS OpenSeizureDetector - uruchamiam alarm</string>
-    <string name="NotOsdSmsMsg">\"SMS nie jest alarmem OpenSeizureDetector więc go ignoruję - nie zawiera on \"</string>
+    <string name="NotOsdSmsMsg">SMS nie jest alarmem OpenSeizureDetector więc go ignoruję - nie zawiera on</string>
     <string name="StartingSmsAnnunciatorMsg">Uruchamiam OpenSeizureDetector SMS Annunciator...</string>
     <string name="AboutMenuTitle">O programie</string>
     <string name="EnableMenuTitle">Włącz</string>

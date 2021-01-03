@@ -1,19 +1,17 @@
 {
-  "version": 1,
+  "version": 2,
   "artifactType": {
     "type": "APK",
     "kind": "Directory"
   },
   "applicationId": "uk.org.openseizuredetector.sms_annunciator",
-  "variantName": "release",
+  "variantName": "processReleaseResources",
   "elements": [
     {
       "type": "SINGLE",
       "filters": [],
-      "properties": [],
-      "versionCode": 6,
-      "versionName": "1.0.5",
-      "enabled": true,
+      "versionCode": 7,
+      "versionName": "1.0.6",
       "outputFile": "app-release.apk"
     }
   ]
