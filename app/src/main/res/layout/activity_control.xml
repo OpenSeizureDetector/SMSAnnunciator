@@ -18,44 +18,25 @@
         android:id="@+id/service_status_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="service_status_tv" />
-
-    <!--<LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/startServiceButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/start" />
-
-        <Button
-            android:id="@+id/stopServiceButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/stop" />
-    </LinearLayout>
-    -->
+        android:text="" />
 
     <TextView
         android:id="@+id/alarmStandingTv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="alarmStandingTv" />
+        android:text="" />
 
     <TextView
         android:id="@+id/phoneNoTv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="PhoneNoTv" />
+        android:text="" />
 
     <TextView
         android:id="@+id/messageTv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="messageTv" />
+        android:text="" />
 
 
     <Button
