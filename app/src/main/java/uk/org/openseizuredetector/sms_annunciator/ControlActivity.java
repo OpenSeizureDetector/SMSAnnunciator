@@ -70,7 +70,9 @@ public class ControlActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_control);
-
+        mActivity = this;
+        mUtil = new ServiceUtils(mActivity);
+        mServiceConn = new ServiceUtils.SmsAnnunciatorServiceConnection(mActivity);
     }
 
     /**
@@ -126,36 +128,11 @@ public class ControlActivity extends AppCompatActivity {
         Log.v(TAG,"onResume()");
         super.onResume();
 
-        mActivity = this;
-        mUtil = new ServiceUtils(mActivity);
-
         requestPermissions();
 
-        mServiceConn = new ServiceUtils.SmsAnnunciatorServiceConnection(mActivity);
         if (mUtil.isServerRunning()) {
             mUtil.bindToServer(mActivity, mServiceConn);
         }
-
-        /*mStartBtn = (Button)findViewById(R.id.startServiceButton);
-        mStartBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Log.v(TAG,"Start Button Clicked");
-                mUtil.startServer();
-                mUtil.bindToServer(mActivity,mServiceConn);
-            }
-        });
-        mStopBtn = (Button)findViewById(R.id.stopServiceButton);
-        mStopBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Log.v(TAG,"Stop Button Clicked");
-                mServiceConn.mService.acceptAlarm();
-                mUtil.unbindFromServer(mActivity, mServiceConn);
-                mUtil.stopServer();
-            }
-        });
-         */
 
         mAcceptBtn = (Button)findViewById(R.id.acceptAlarmButton2);
         mAcceptBtn.setOnClickListener(new View.OnClickListener() {

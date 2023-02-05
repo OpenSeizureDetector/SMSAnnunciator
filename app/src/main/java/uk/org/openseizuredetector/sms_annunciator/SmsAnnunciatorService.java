@@ -139,12 +139,18 @@ public class SmsAnnunciatorService extends Service {
         Log.i(TAG, "onDestroy(): SmsAnnunciator Service stopping");
         unregisterReceiver(mSmsReceiver);
 
+        // Stop the beep timer if it is running.
+        if (mBeepTimer != null) {
+            mBeepTimer.cancel();
+        }
+
         try {
             // Cancel the notification.
             Log.v(TAG, "onDestroy(): cancelling notification");
             mNM.cancel(NOTIFICATION_ID);
         } catch (Exception e) {
             Log.v(TAG, "Exception cancelling Notification: " + e.toString());
+            showToast("Exception cancelling Notification: " + e.toString());
         }
     }
 
